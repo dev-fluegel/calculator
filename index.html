@@ -17,37 +17,37 @@
 
         <table class="calculator">
             <tr>
-                <td class="result_area" colspan="4" rowspan="2">RESULT</td>
+                <td id="result_area" class="result_area" colspan="4" rowspan="2"></td>
             </tr>
 			<tr>
 			</tr>
             <tr>
-                <td class="function_btn">C</td>
+                <td class="function_btn" onclick="delete_last()">C</td>
 				<td class="function_btn">±</td>
 				<td class="function_btn">%</td>
-				<td class="operation_btn">÷</td>
+				<td class="operation_btn" onclick="append_operation(' / ')">÷</td>
             </tr>
 			<tr>
-                <td class="number_btn">7</td>
-				<td class="number_btn">8</td>
-				<td class="number_btn">9</td>
-				<td class="operation_btn">×</td>
+                <td class="number_btn" onclick="append_operation(7)">7</td>
+				<td class="number_btn" onclick="append_operation(8)">8</td>
+				<td class="number_btn" onclick="append_operation(9)">9</td>
+				<td class="operation_btn" onclick="append_operation(' * ')">×</td>
             </tr>
 			<tr>
-                <td class="number_btn">4</td>
-				<td class="number_btn">5</td>
-				<td class="number_btn">6</td>
-				<td class="operation_btn">-</td>
+                <td class="number_btn" onclick="append_operation(4)">4</td>
+				<td class="number_btn" onclick="append_operation(5)">5</td>
+				<td class="number_btn" onclick="append_operation(6)">6</td>
+				<td class="operation_btn" onclick="append_operation(' - ')">-</td>
             </tr>
 			<tr>
-                <td class="number_btn">1</td>
-				<td class="number_btn">2</td>
-				<td class="number_btn">3</td>
-				<td class="operation_btn">+</td>
+                <td class="number_btn" onclick="append_operation(1)">1</td>
+				<td class="number_btn" onclick="append_operation(2)">2</td>
+				<td class="number_btn" onclick="append_operation(3)">3</td>
+				<td class="operation_btn" onclick="append_operation(' + ')">+</td>
             </tr>
 			<tr>
-				<td class="number_btn" colspan="2">0</td>
-				<td class="number_btn">,</td>
+				<td class="number_btn" onclick="append_operation(0)" colspan="2">0</td>
+				<td class="number_btn" onclick="append_operation('.')">,</td>
 				<td class="operation_btn">=</td>
             </tr>
         </table>
