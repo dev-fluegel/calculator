@@ -1,0 +1,35 @@
+/* general */
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* table */
+
+.result_area {
+    margin: 0px;
+    padding: 0px;
+    /* code here */
+}
+
+/* buttons */
+
+.function_btn {
+    margin: 0px;
+    padding: 0px;
+    /* code here */
+}
+
+.operation_btn {
+    margin: 0px;
+    padding: 0px;
+    /* code here */
+}
+
+.number_btn {
+    margin: 0px;
+    padding: 0px;
+    /* code here */
+}
