@@ -4,6 +4,7 @@ function append_operation(operation) {
 
 }
 
+
 function calculate_result() {
 
     let container = document.getElementById('result_area');
@@ -12,6 +13,7 @@ function calculate_result() {
     container.innerHTML = result;
     
 }
+
 
 function delete_last() {
 
@@ -22,6 +24,10 @@ function delete_last() {
     } else {
         container.innerHTML = container.innerHTML.slice(0, -1);
     }
-    /* code here */
 
+}
+
+
+function coming_soon() {
+    window.alert('coming soon: this function is not avalible now');
 }
