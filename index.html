@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="de">
+
 	<head>
 		<meta charset="UTF-8">
-		<meta name="description" content="">
-		<meta name="keywords" content="">
+		<meta name="description" content="a simple calculator">
+		<meta name="keywords" content="calculator">
 		<meta name="author" content="Bastian Flügel">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
@@ -11,22 +12,23 @@
 
 		<link rel="stylesheet" href="style.css">
 		<script type="text/javascript" src="script.js"></script>
+		<link rel="manifest" href="manifest.webmanifest">
 	</head>
 
 	<body>
-        <div class="container">
 
+        <div class="container">
 			<div class="box">
 				<table class="calculator">
+
 					<tr>
-						<td id="result_area" class="result_area" colspan="4" rowspan="2"></td>
+						<td id="result_area" class="result_area" colspan="4"></td>
 					</tr>
-					<tr>
-					</tr>
+
 					<tr>
 						<td class="function_btn" id="clear_btn" onclick="delete_last()">C</td>
-						<td class="function_btn" onclick="coming_soon()">±</td>
-						<td class="function_btn" onclick="coming_soon()">%</td>
+						<td class="function_btn" onclick="append_operation(' ( ')">(</td>
+						<td class="function_btn" onclick="append_operation(' ) ')">)</td>
 						<td class="operation_btn" onclick="append_operation(' / ')">÷</td>
 					</tr>
 					<tr>
@@ -48,12 +50,15 @@
 						<td class="operation_btn" onclick="append_operation(' + ')">+</td>
 					</tr>
 					<tr>
-						<td class="number_btn_zero"onclick="append_operation(0)" colspan="2">0</td>
+						<td class="number_btn"onclick="append_operation(0)" >0</td>
 						<td class="number_btn" onclick="append_operation('.')">,</td>
-						<td class="operation_btn" onclick="calculate_result()">=</td>
+						<td class="operation_btn_solve" onclick="calculate_result()" colspan="2">=</td>
 					</tr>
+
 				</table>
 			</div>
 		</div>
+
 	</body>
+	
 </html>

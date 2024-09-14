@@ -1,4 +1,7 @@
 let active_error = false;
+let is_result = false;
+
+
 
 function append_operation(operation) {
     
@@ -21,11 +24,16 @@ function calculate_result() {
         result = eval(container.innerHTML);
     } catch {
         result = '#ERROR!';
+    }
+
+    if (result === Infinity || result === '#ERROR!' || isNaN(result) || result === undefined) {
         active_error = true;
-        document.getElementById('clear_btn').innerHTML = 'AC';
     }
 
     container.innerHTML = result;
+    is_result = true;
+    document.getElementById('clear_btn').innerHTML = 'AC';
+    return result;
     
 }
 
@@ -34,10 +42,11 @@ function delete_last() {
 
     let container = document.getElementById('result_area');
 
-    if (active_error == true) {
+    if (active_error == true || is_result == true) {
 
         container.innerHTML = '';
         active_error = false;
+        is_result = false;
         document.getElementById('clear_btn').innerHTML = 'C';
 
     } else {
